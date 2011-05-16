@@ -51,6 +51,7 @@ module ParamsValidator
     # raise ArgumentError if an error occurred
     #
     def validate_method(params = nil, &block)
+      puts "Entering in validation with params #{params}"
       method = MethodValidation.new("foo_bar")
       
       block_given? and method.block &block
